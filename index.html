@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Tanaman Hijau - Jual Tanaman Hias & Buah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <h1>Toko Tanaman Hijau</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Hijaukan Rumah Anda</h2>
+            <p>Koleksi tanaman hias dan tanaman buah berkualitas tinggi</p>
+            <a href="#products" class="btn-primary">Belanja Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produk Kami</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="hias">Tanaman Hias</button>
+                <button class="filter-btn" data-filter="buah">Tanaman Buah</button>
+                <button class="filter-btn" data-filter="indoor">Indoor</button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="hias indoor">
+                    <div class="product-image">
+                        <img src="Monstera Deliciosa.jpg" alt="Monstera">
+                        <span class="badge">Populer</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Monstera Deliciosa</h3>
+                        <p class="description">Tanaman hias tropis dengan daun unik</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 150.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.8
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Monstera Deliciosa', 150000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="hias indoor">
+                    <div class="product-image">
+                        <img src="Sansevieria (Lidah Mertua).jpg" alt="Lidah Mertua">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sansevieria (Lidah Mertua)</h3>
+                        <p class="description">Mudah dirawat, cocok untuk pemula</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 75.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.9
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Sansevieria', 75000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="buah">
+                    <div class="product-image">
+                        <img src="istockphoto-868604108-612x612.jpg" alt="Jeruk">
+                        <span class="badge new">Baru</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jeruk Nipis</h3>
+                        <p class="description">Tanaman buah produktif</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 125.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.7
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Jeruk Nipis', 125000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="hias">
+                    <div class="product-image">
+                        <img src="images.jpg" alt="Mawar">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mawar Merah</h3>
+                        <p class="description">Bunga cantik untuk taman</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 95.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.6
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Mawar Merah', 95000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="buah">
+                    <div class="product-image">
+                        <img src="download.jpg" alt="Cabai">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cabai Rawit</h3>
+                        <p class="description">Tanaman cabai untuk dapur</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 45.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.5
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Cabai Rawit', 45000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="hias indoor">
+                    <div class="product-image">
+                        <img src="images (1).jpg" alt="Pothos">
+                        <span class="badge">Populer</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Golden Pothos</h3>
+                        <p class="description">Tanaman merambat cantik</p>
+                        <div class="price-rating">
+                            <span class="price">Rp 65.000</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.8
+                            </span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Golden Pothos', 65000)">
+                            <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Toko Tanaman Terpercaya</h3>
+                    <p>Kami menyediakan berbagai jenis tanaman hias dan tanaman buah berkualitas tinggi dengan harga terjangkau. Semua tanaman kami dipilih dengan teliti untuk memastikan kesehatan dan kualitas terbaik.</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tanaman Berkualitas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Pengiriman Cepat</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Layanan 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Tanaman Hijau No. 123, Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@tokotanamanhijau.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nama Anda" required>
+                    <input type="email" placeholder="Email Anda" required>
+                    <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Toko Tanaman Hijau</h3>
+                    <p>Menyediakan tanaman berkualitas untuk rumah Anda</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Cepat</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Jumat: 08.00 - 17.00</p>
+                    <p>Sabtu: 08.00 - 15.00</p>
+                    <p>Minggu: Tutup</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toko Tanaman Hijau. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: <span id="totalPrice">Rp 0</span></h3>
+                <button class="btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
